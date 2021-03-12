@@ -1,0 +1,14 @@
+
+.testimonialCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 25vw;
+
+    & img {
+        width: 50%;
+        margin: 0 auto;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+}
