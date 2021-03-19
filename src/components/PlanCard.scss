@@ -5,7 +5,7 @@
     width: 400px;
     color: #000;
 
-    border: 1px solid green;
+    border: 1px solid rgb(243, 243, 243);
 
     &__title {
         background-color: $primaryColor;
@@ -57,7 +57,7 @@
 
     &__features {
         padding: 1rem;
-        background-color: rgb(241, 255, 241);
+        background-color: rgb(247, 247, 247);
         padding-top: 40px;
 
         .features__heading {

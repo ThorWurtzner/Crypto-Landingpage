@@ -1,0 +1,106 @@
+@import "../variables";
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.61);
+    z-index: 9001;
+    backdrop-filter: blur(5px);
+    display: grid;
+
+    section {
+        place-self: center;
+        background-color: $backgroundColor;
+        height: 320px;
+        width: 700px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        header {
+            background-color: $primaryColor;
+            color: $backgroundColor;
+            padding: 1rem;
+            
+            h1 {
+                margin: 0;
+            }
+        }
+
+        article {
+            padding-right: 30px;
+        }
+    }
+
+    input[type="checkbox"] {
+        visibility: hidden;
+        width: 1px;
+        height: 1px;
+        display: none;
+
+        &:checked + .consentToggle::after {
+            transform: translateX(2em);
+            background-color: green;
+        }
+
+        &:checked + .consentToggle {
+            background-color: rgb(117, 212, 117);
+        }
+
+        &:disabled + .consentToggle {
+            opacity: 0.3;
+        }
+
+        &:disabled + .consentToggle::after {
+            // opacity: 0.5;
+        }
+    }
+
+    .consentToggle {
+        display: inline-block;
+        width: 3rem;
+        height: 1rem;
+        border-radius: 0.5rem;
+        background-color: lightgrey;
+        transition: 0.5s ease;
+
+        margin: 0 70px;
+
+        &::after {
+            display: block;
+            content: "";
+            width: 1rem;
+            height: 1rem;
+            background-color: grey;
+            border-radius: 50%;
+
+            transition: transform 0.5s ease, background-color 0.5s ease;
+        }
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 20px;
+
+        button {
+            border: none;
+            width: 120px;
+            height: 40px;
+            background-color: lightgrey;
+            margin: 0 20px;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        button:nth-of-type(2) {
+            background-color: rgb(34, 128, 34);
+            color: #fff;
+        }
+    }
+}
