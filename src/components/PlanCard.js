@@ -10,7 +10,7 @@ export default function PlanCard(props) {
                 <p className="planCard__title__conditions">/user/month*<br/>(billed annually)</p>
                 <a href={props.link}
                     // eslint-disable-next-line
-                    onClick={() => gtag("event", "select_content", { "content_type:": props.heading})}
+                    onClick={() => gtag("event", "select_content", { "content_type:": props.heading, "test-type": "A" })}
                 >Try for free &gt;</a>
             </section>
 
