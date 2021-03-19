@@ -8,7 +8,10 @@ export default function PlanCard(props) {
                 <p className="planCard__title__summary">{props.summary}</p>
                 <p className="planCard__title__price">{props.price}</p>
                 <p className="planCard__title__conditions">/user/month*<br/>(billed annually)</p>
-                <a href={props.link}>Try for free &gt;</a>
+                <a href={props.link}
+                    // eslint-disable-next-line
+                    onClick={() => gtag("event", "select_content", { "content_type:": props.heading})}
+                >Try for free &gt;</a>
             </section>
 
             <section className="planCard__features">
