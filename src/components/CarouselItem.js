@@ -8,7 +8,7 @@ export default function CarouselItem(props) {
                 <p>{props.copy}</p>
                 <a href={props.ctaLink} 
                     // eslint-disable-next-line
-                    onClick={gtag("event", "cta", props.ctaLink)}
+                    onClick={gtag("event", "select_content", { "content_type:": props.ctaLink})}
                 >{props.ctaCopy}</a>
             </div>
         </div>
